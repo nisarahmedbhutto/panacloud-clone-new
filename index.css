@@ -1,0 +1,60 @@
+/* Basic styling */
+body, ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+}
+
+#headings {
+    display: flex;
+    gap: 10px;
+}
+
+#pages {
+    display: flex;
+    gap: 15px;
+}
+
+#pages li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Hamburger icon styling */
+#hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+}
+
+/* Mobile responsive styling */
+@media (max-width: 768px) {
+    #pages {
+        display: none; /* Hide menu by default */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: #333;
+        padding: 10px;
+        border-radius: 5px;
+    }
+    
+    #pages.show { /* Show menu when hamburger is clicked */
+        display: flex;
+    }
+    
+    #hamburger {
+        display: block;
+    }
+}
